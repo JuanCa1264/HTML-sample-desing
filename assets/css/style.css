@@ -1,0 +1,15 @@
+#menu{
+    background: rgba(255,255,255,255);
+}
+
+#imgLogo{
+	width: 30px;
+	height: 30px;
+}
+
+p.text-secondary {
+	width: auto;
+	text-align: justify;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 5px;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/pag2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>Document</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	window.onscroll = function (e) {  
+	var scrollPosition = $("body, html").scrollTop()
+	if (scrollPosition == 0){
+    console.log("top");
+    $("#menu").attr("style","margin-top: 90px; margin-left: 13px; margin-right: 13px;");
+    
+
+	} 
+
+	else{
+		$("#menu").attr("style","margin-top: 0px; margin-bottom: 20px; margin-left: 13px; margin-right: 13px;");
+	
+	}
+} 
+
+$(document).ready(function() {
+  $('#nombre').on('keyup', function() {
+      var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#nombre').val())) {
+
+      } 
+      else {
+          $('#nombre').val("");
+      }
+});
+
+$(document).mousemove(function(event){
+  var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#nombre').val())) {
+
+      } 
+      else {
+          $('#nombre').val("");
+      }
+});
+
+//
+ $('#apellido').on('keyup', function() {
+      var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#apellido').val())) {
+
+      } 
+      else {
+          $('#apellido').val("");
+      }
+});
+
+$(document).mousemove(function(event){
+  var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#apellido').val())) {
+
+      } 
+      else {
+          $('#apellido').val("");
+      }
+});
+
+
+});
+
+
+function validar(){
+  if($('[name=flexRadioDefault]:checked').length && $('[name=cb]:checked').length && $('#nombre').val().length > 0 && $('#apellido').val().length > 0 && $('#email').val().length > 0 && $('#coment').val().length > 0){
+    
+
+   $("#formulario").submit();
+   alert('Información enviada.');
+  }
+     
+else
+{
+  alert('Rellene todos los campos.');
+}
+     
+}
+
+
+</script>
+<div class="container" id="contenedor">
+	<div class="row gx-5">
+      <div class="text-center m-2">
+      <img src="../assets/img/tripode.png" width="50px" alt="" />
+      <strong class="text-secondary" style="font-size: 30px"
+        >TRIPOD STUDIO</strong
+      >
+    </div>
+     </div>
+
+     <div class="row gx-5">
+      <div class="col">
+        <nav class="navbar fixed-top navbar-expand-lg border-top border-light border-bottom border-light" id="menu" style="margin-top: 90px; margin-left: 13px; margin-right: 13px;">
+  <div class="container-fluid" >
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"><i class="fa fa-camera-retro fa-lg"></i></a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto">
+        
+        <a class="nav-link" href="../index.html">HOME</a>
+        <a class="nav-link" href="pag2N.html">NOSOTROS</a>
+        <a class="nav-link" href="#">SERVICIOS</a>
+        <a class="nav-link" href="pag2F.html">CONTACTO</a>
+        <a class="nav-link" href="pag2FAQ.html">FAQ</a>
+        <a class="nav-link" href="#" id="modalB" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+     </div>
+
+<form style="margin-top: 120px;" id="formulario">
+
+<div class="row gx-5">
+  <div class="col-12">
+    <label for="nombre" class="form-label">Nombres</label>
+    <input type="input" class="form-control" id="nombre" aria-describedby="" required/>
+  </div>
+</div>
+
+<div class="row gx-5">
+<div class="col-12">
+    <label for="apellido" class="form-label">Apellidos</label>
+    <input type="input" class="form-control" id="apellido" aria-describedby="" required>
+  </div>
+  </div>
+
+  <div class="row gx-5">
+<div class="col-12">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+    <br>
+  </div>
+
+  </div>
+   
+
+  <div class="row gx-5">
+    
+    <label>Género</label>
+    <br>
+    <div class="col-2">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Masculino
+  </label>
+</div>
+
+<div class="col-2">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+  <label class="form-check-label" for="flexRadioDefault2">
+    Femenino
+  </label>
+  </div>
+  </div>
+
+  <!--<div class="row gx-5">
+
+    <div class="col-3">
+      
+    </div>
+    
+  </div>
+-->
+
+<div class="row gx-5">
+
+    <div class="col-5">
+      <br>
+      <label>Nivel de escolaridad</label>
+      <select class="form-select" aria-label="Default select example" required>
+      
+      <option value="1">Parvularia</option>
+      <option value="2">Básico</option>
+      <option value="3">Medio</option>
+      <option value="4">Superior</option>
+</select>
+<br>
+    </div>
+    
+  </div>
+
+  <div class="row gx-5">
+<br>
+      <label>Intereses</label>
+    <div class="col-2">
+      
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="cb">
+  <label class="form-check-label" for="flexCheckDefault">
+    Música
+  </label>
+</div>
+    </div>
+
+    <div class="col-2">
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="cb">
+  <label class="form-check-label" for="flexCheckDefault">
+    Lectura
+  </label>
+</div>
+    </div>
+
+    <div class="col-2">
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="cb">
+  <label class="form-check-label" for="flexCheckDefault">
+    Cocina
+  </label>
+</div>
+    </div>
+
+    <div class="col-2">
+      <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="cb">
+  <label class="form-check-label" for="flexCheckDefault">
+    Fotografía
+  </label>
+
+</div>
+<br>
+    </div>
+    
+  </div>
+
+  <div class="row gx-5">
+
+    <div class="col-12">
+      <label>Comentarios</label>
+        <textarea class="form-control" aria-label="With textarea" required id="coment"></textarea>
+<br>
+    </div>
+    
+  </div>
+
+<div class="row gx-5">
+
+    <div class="col-2">
+        <button type="button" class="btn btn-primary" onclick="validar()">Enviar</button>
+    </div>
+
+    <div class="col-2">
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+    </div>
+    
+  </div>
+
+
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="text-align: center;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formulario" onsubmit="alert('Acceso correcto.');">
+
+<div class="row gx-5">
+  <div class="col-12">
+    <label for="usuario" class="form-label">Usuario</label>
+    <input type="input" class="form-control" id="usuario" aria-describedby="" required>
+  </div>
+</div>
+
+<div class="row gx-5">
+<div class="col-12">
+    <label for="pass" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="pass" aria-describedby="" required>
+  </div>
+  </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+     
+</div>
+
+</body>
+</html>

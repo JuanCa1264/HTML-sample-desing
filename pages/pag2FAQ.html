@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../pag2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>Document</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	window.onscroll = function (e) {  
+	var scrollPosition = $("body, html").scrollTop()
+	if (scrollPosition == 0){
+    console.log("top");
+    $("#menu").attr("style","margin-top: 90px; margin-left: 13px; margin-right: 13px;");
+    
+
+	} 
+
+	else{
+		$("#menu").attr("style","margin-top: 0px; margin-bottom: 20px; margin-left: 13px; margin-right: 13px;");
+	
+	}
+} 
+
+$(document).ready(function() {
+  $('#nombre').on('keyup', function() {
+      var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#nombre').val())) {
+
+      } 
+      else {
+          $('#nombre').val("");
+      }
+});
+
+$(document).mousemove(function(event){
+  var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#nombre').val())) {
+
+      } 
+      else {
+          $('#nombre').val("");
+      }
+});
+
+//
+ $('#apellido').on('keyup', function() {
+      var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#apellido').val())) {
+
+      } 
+      else {
+          $('#apellido').val("");
+      }
+});
+
+$(document).mousemove(function(event){
+  var RegExpression = /^[a-zA-Z\s]*$/;   
+
+      if (RegExpression.test($('#apellido').val())) {
+
+      } 
+      else {
+          $('#apellido').val("");
+      }
+});
+
+
+});
+
+
+function validar(){
+  if($('[name=flexRadioDefault]:checked').length && $('[name=cb]:checked').length){
+    
+
+
+   $("#formulario").submit();
+   alert('Información enviada.');
+  }
+     
+else
+{
+  alert('Seleccione género e intereses.');
+}
+     
+}
+
+
+</script>
+<div class="container" id="contenedor">
+	<div class="row gx-5">
+      <div class="text-center m-2">
+      <img src="../assets/img/tripode.png" width="50px" alt="" />
+      <strong class="text-secondary" style="font-size: 30px"
+        >TRIPOD STUDIO</strong
+      >
+    </div>
+     </div>
+
+     <div class="row gx-5">
+      <div class="col">
+        <nav class="navbar fixed-top navbar-expand-lg border-top border-light border-bottom border-light" id="menu" style="margin-top: 90px; margin-left: 13px; margin-right: 13px;">
+  <div class="container-fluid" >
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"><i class="fa fa-camera-retro fa-lg"></i></a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto">
+        
+        <a class="nav-link" href="../index.html">HOME</a>
+        <a class="nav-link" href="pag2N.html">NOSOTROS</a>
+        <a class="nav-link" href="#">SERVICIOS</a>
+        <a class="nav-link" href="pag2F.html">CONTACTO</a>
+        <a class="nav-link" href="pag2FAQ.html">FAQ</a>
+        <a class="nav-link" href="#" id="modalB" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+     </div>
+
+<div class="row gx-5" style="margin-top: 150px;">
+
+  <div class="col-12">
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        ¿Cómo se manejan los derechos de fotografía?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Cuando el fotógrafo publique en la plataforma obras que representen a una o más personas reconocibles, se asegurará de tener derecho a vender las fotografías como obras de arte, de conformidad con la ley, la jurisprudencia o mediante un contrato con la persona interesada. De reserva el derecho de retirar una fotografía hasta que el fotógrafo haya presentado una autorización debidamente firmada por el interesado, y que cubra los derechos de imagen necesarios para la página.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        ¿Puede el sitio utilizar mis fotografías para publicitar sus servicios?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Sí, para garantizar el éxito de la plataforma, es imprescindible que podamos reproducir las fotografías disponibles en el sitio con fines comunicativos y publicitarios relacionados con la página, para aumentar las visitas y con ellas las opciones de venta.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        ¿Quién declara los impuestos sobre lo que le corresponde al fotógrafo?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Es el fotógrafo, independientemente de su estatus y régimen fiscal, quien se encarga de declarar los impuestos derivados del volumen de negocios obtenido en las ventas y él mismo incluirá esos ingresos en su contabilidad. Nuestra compañía no asume obligaciones administrativas relacionadas con la contabilidad del fotógrafo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="text-align: center;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formulario" onsubmit="alert('Acceso correcto.');">
+
+<div class="row gx-5">
+  <div class="col-12">
+    <label for="usuario" class="form-label">Usuario</label>
+    <input type="input" class="form-control" id="usuario" aria-describedby="" required>
+  </div>
+</div>
+
+<div class="row gx-5">
+<div class="col-12">
+    <label for="pass" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="pass" aria-describedby="" required>
+  </div>
+  </div>
+    
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+     
+</div>
+
+</body>
+</html>
