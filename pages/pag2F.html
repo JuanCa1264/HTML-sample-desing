@@ -16,77 +16,7 @@
 </head>
 <body>
 
-<script type="text/javascript">
-	
- 
 
-$(document).ready(function() {
-  $('#nombre').on('keyup', function() {
-      var RegExpression = /^[a-zA-Z\s]*$/;   
-
-      if (RegExpression.test($('#nombre').val())) {
-
-      } 
-      else {
-          $('#nombre').val("");
-      }
-});
-
-$(document).mousemove(function(event){
-  var RegExpression = /^[a-zA-Z\s]*$/;   
-
-      if (RegExpression.test($('#nombre').val())) {
-
-      } 
-      else {
-          $('#nombre').val("");
-      }
-});
-
-//
- $('#apellido').on('keyup', function() {
-      var RegExpression = /^[a-zA-Z\s]*$/;   
-
-      if (RegExpression.test($('#apellido').val())) {
-
-      } 
-      else {
-          $('#apellido').val("");
-      }
-});
-
-$(document).mousemove(function(event){
-  var RegExpression = /^[a-zA-Z\s]*$/;   
-
-      if (RegExpression.test($('#apellido').val())) {
-
-      } 
-      else {
-          $('#apellido').val("");
-      }
-});
-
-
-});
-
-
-function validar(){
-  if($('[name=flexRadioDefault]:checked').length && $('[name=cb]:checked').length && $('#nombre').val().length > 0 && $('#apellido').val().length > 0 && $('#email').val().length > 0 && $('#coment').val().length > 0){
-    
-
-   $("#formulario").submit();
-   alert('Información enviada.');
-  }
-     
-else
-{
-  alert('Rellene todos los campos.');
-}
-     
-}
-
-
-</script>
 <div class="container" id="contenedor">
 	<div class="row gx-5">
       <div class="text-center m-2">
