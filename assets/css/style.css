@@ -7,9 +7,30 @@
 	height: 30px;
 }
 
+.navbar-brand{
+	
+	
+
+	
+}
+
 p.text-secondary {
 	width: auto;
 	text-align: justify;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	padding: 5px;
 }
+
+/* Sticking navbar */
+
+.container-fluid{
+
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	padding: 0;
+
+
+}
+
+	

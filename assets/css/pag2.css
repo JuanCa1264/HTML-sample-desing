@@ -78,3 +78,13 @@ position : absolute
 }
 
 
+/* Sticking navbar */
+
+.container-fluid{
+
+
+	position: sticky;
+
+
+}
+
